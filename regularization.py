@@ -117,8 +117,8 @@ plt.close()
 print("\n===== L1 REGULARIZATION =====")
 
 l1_model = LogisticRegression(
-    penalty='l1',
     solver='liblinear',
+    l1_ratio=1.0,
     C=0.1,
     max_iter=10000
 )
@@ -175,7 +175,7 @@ plt.close()
 print("\n===== L2 REGULARIZATION =====")
 
 l2_model = LogisticRegression(
-    penalty='l2',
+    l1_ratio=0.0,
     C=0.1,
     max_iter=10000
 )
